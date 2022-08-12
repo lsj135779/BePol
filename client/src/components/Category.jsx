@@ -62,7 +62,11 @@ export default function Category(props) {
             targetId={targetId}
             backgroundColor={color[idx]}
           >
-            <img id={idx} src={categoryImg[idx]} alt={category[idx]} />
+            <img
+              id={idx}
+              src={`${process.env.PUBLIC_URL}${categoryImg[idx]}`}
+              alt={category[idx]}
+            />
           </CategoryIcon>
           <CategoryTxt id={idx}>{category[idx]}</CategoryTxt>
         </CategoryBlock>

@@ -233,7 +233,10 @@ export default function Write({ history }) {
     <Body>
       <Title>
         <div> 모의 법안 등록하기</div>
-        <img src={"images/writeIcon.png"} alt={"등록아이콘"}></img>
+        <img
+          src={`${process.env.PUBLIC_URL}/images/writeIcon.png`}
+          alt={"등록아이콘"}
+        ></img>
       </Title>
       <DropMenuContainer
         marginBottom={

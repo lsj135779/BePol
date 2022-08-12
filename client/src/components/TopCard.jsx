@@ -44,19 +44,28 @@ export default function TopCard({ info }) {
           <CardDetail>
             <CardButton>
               <CardIcon>
-                <img src="/images/likesIcon.png" alt="likes Icon" />
+                <img
+                  src={`${process.env.PUBLIC_URL}/images/likesIcon.png`}
+                  alt="likes Icon"
+                />
               </CardIcon>
               <p>{info.agrees}</p>
             </CardButton>
             <CardButton>
               <CardIcon>
-                <img src="/images/dislikesIcon.png" alt="dislikes Icon" />
+                <img
+                  src={`${process.env.PUBLIC_URL}/images/dislikesIcon.png`}
+                  alt="dislikes Icon"
+                />
               </CardIcon>
               <p>{info.disagrees}</p>
             </CardButton>
             <CardButton>
               <CardIcon>
-                <img src="/images/commentsCntIcon.png" alt="comments Icon" />
+                <img
+                  src={`${process.env.PUBLIC_URL}/images/commentsCntIcon.png`}
+                  alt="comments Icon"
+                />
               </CardIcon>
               <p>{info.comments}</p>
             </CardButton>

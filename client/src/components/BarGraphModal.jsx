@@ -18,7 +18,6 @@ export default function BarGraphModal({ voteCount, statistic }) {
   const dispatch = useDispatch();
   const male = statistic.male;
   const female = statistic.female;
-
   return (
     <Background onClick={() => dispatch(showStatisticsModal(false))}>
       <Container onClick={(e) => e.stopPropagation()}>
@@ -172,7 +171,10 @@ export default function BarGraphModal({ voteCount, statistic }) {
           <NoData>
             <div>통계를 위한 투표수가 부족합니다.</div>
             <div>투표에 참여해보세요!</div>
-            <img src={"/images/vote.png"} alt={"투표마크"}></img>
+            <img
+              src={`${process.env.PUBLIC_URL}/images/vote.png`}
+              alt={"투표마크"}
+            ></img>
           </NoData>
         )}
       </Container>

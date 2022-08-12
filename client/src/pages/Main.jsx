@@ -76,7 +76,7 @@ export default function Main() {
       .then((result) => {
         let popularPostInfo = result.data.data.map((item, idx) => {
           return {
-            id: item.postId,
+            id: item._id,
             title: item.title,
             agrees: item.agrees,
             disagrees: item.disagrees,
@@ -173,20 +173,29 @@ export default function Main() {
           >
             <Text>
               <span>모의법안 발의하기</span>
-              <img src="/images/judgeIcon.png" alt="Judge Icon" />
+              <img
+                src={`${process.env.PUBLIC_URL}/images/judgeIcon.png`}
+                alt="Judge Icon"
+              />
             </Text>
           </Section>
         ) : (
           <Section onClick={handleLoginAlert} backgroundColor="dark">
             <Text>
               <span>모의법안 발의하기</span>
-              <img src="/images/judgeIcon.png" alt="Judge Icon" />
+              <img
+                src={`${process.env.PUBLIC_URL}/images/judgeIcon.png`}
+                alt="Judge Icon"
+              />
             </Text>
           </Section>
         )}
         <Section>
           <h2>모의법안 둘러보기</h2>
-          <img src="/images/binocularsIcon.png" alt="Binoculars Icon" />
+          <img
+            src={`${process.env.PUBLIC_URL}/images/binocularsIcon.png`}
+            alt="Binoculars Icon"
+          />
         </Section>
         <Category
           allCategory={allCategory}

@@ -341,10 +341,15 @@ export const deleteAnswerTransaction = async (postId, userId, answer) => {
 export const getPostStatistics = async (postId) => {
   // 통계 조회
   try {
-    const record = await Post_statistics.findOne(
-      { postId },
-      { _id: 0, postId: 0, createdAt: 0, updatedAt: 0, __v: 0 }
-    );
+    const record = await Post_statistics
+      .findOne
+      // { postId },
+      // function (err, doc) {
+      //   console.log("!!!", doc);
+      // }
+      // { _id: 1, postId: 0, createdAt: 0, updatedAt: 0, __v: 0 }
+      ();
+    console.log(record, postId);
     return record;
   } catch (err) {}
 };

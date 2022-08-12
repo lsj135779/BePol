@@ -64,14 +64,17 @@ export default function Header() {
     <Container>
       <Link to="/">
         <Logo>
-          <img src="/images/logo_transparent.png" alt="Bepol logo" />
+          <img
+            src={`${process.env.PUBLIC_URL}/images/logo_transparent.png`}
+            alt="Bepol logo"
+          />
         </Logo>
       </Link>
       {isLogin ? (
         <Buttons>
           <span>{user.username}님</span>
           <img
-            src="/images/writeHeaderIcon.png"
+            src={`${process.env.PUBLIC_URL}/images/writeHeaderIcon.png`}
             alt="writing Icon"
             onClick={() => navigate("/write")}
           />
@@ -79,8 +82,8 @@ export default function Header() {
             <Icon
               src={
                 seen
-                  ? "/images/notificationEmptyIcon.png"
-                  : "/images/notificationIcon.png"
+                  ? `${process.env.PUBLIC_URL}/images/notificationEmptyIcon.png`
+                  : `${process.env.PUBLIC_URL}/images/notificationIcon.png`
               }
               alt="notification Icon"
               width="20px"

@@ -376,7 +376,10 @@ export default function Detail() {
             <Vote onClick={() => handleVote(true)}>
               <div>찬 성</div>
               {agree ? (
-                <img src={"/images/vote.png"} alt={"투표마크"}></img>
+                <img
+                  src={`${process.env.PUBLIC_URL}/images/vote.png`}
+                  alt={"투표마크"}
+                ></img>
               ) : (
                 <div></div>
               )}
@@ -384,7 +387,10 @@ export default function Detail() {
             <Vote onClick={() => handleVote(false)}>
               <div>반 대</div>
               {agree === false ? (
-                <img src={"/images/vote.png"} alt={"투표마크"}></img>
+                <img
+                  src={`${process.env.PUBLIC_URL}/images/vote.png`}
+                  alt={"투표마크"}
+                ></img>
               ) : (
                 <div></div>
               )}
